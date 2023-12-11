@@ -1,0 +1,10 @@
+{
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "lib": ["ES2020"],
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "target": "es2022",
+    "strict": true
+  }
+}
