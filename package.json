@@ -1,7 +1,7 @@
 {
   "name": "d2-data-restructuring",
   "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.d.ts",
+  "module": "./lib/esm/index.js",
   "types": "./lib/types/index.d.ts",
   "type": "module",
   "peerDependencies": {
