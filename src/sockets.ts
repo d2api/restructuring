@@ -85,9 +85,10 @@ export function getSocketCollections(
   const allSockets = getAllSockets(def, components);
   if (!allSockets) return;
   const validSockets = allSockets.filter(validateSocketBundle) as ValidSocketInfoBundle[];
-  const socketCategories = def.sockets!.socketCategories.map((sc) => {
-    const all = sc.socketIndexes.map((si) => allSockets[si]);
+  const socketCategories = def.sockets!.socketCategories.map((socketCategory) => {
+    const all = socketCategory.socketIndexes.map((si) => allSockets[si]);
     const valid = all.filter(validateSocketBundle) as ValidSocketInfoBundle[];
+    return { socketCategory, allSockets: all, validSockets: valid };
   });
   return { allSockets, validSockets, socketCategories };
 }

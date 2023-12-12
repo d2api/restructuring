@@ -44,7 +44,11 @@ export declare function getAllSockets(def: DestinyInventoryItemDefinition, compo
 export declare function getSocketCollections(def: DestinyInventoryItemDefinition, components: Partial<ItemComponentBundle>): {
     allSockets: SocketInfoBundle[];
     validSockets: ValidSocketInfoBundle[];
-    socketCategories: void[];
+    socketCategories: {
+        socketCategory: import("bungie-api-ts/destiny2").DestinyItemSocketCategoryDefinition;
+        allSockets: SocketInfoBundle[];
+        validSockets: ValidSocketInfoBundle[];
+    }[];
 } | undefined;
 export declare type SocketCollection = ReturnType<typeof getSocketCollections>;
 export declare type SocketPurpose = "armor_energy" | "armor_intrinsic" | "armor_masterwork" | "armor_mod" | "armor_ornament" | "kill_tracker" | "exotic_catalyst" | "exotic_catalyst_weapon_perk" | "random_stat" | "shader" | "weapon_intrinsic" | "weapon_mod" | "weapon_ornament" | "weapon_part" | "weapon_perk";
